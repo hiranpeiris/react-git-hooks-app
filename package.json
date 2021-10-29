@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src --color"
+    "lint": "eslint src --color",
+    "husky-install": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -46,11 +47,5 @@
     "@typescript-eslint/parser": "^5.2.0",
     "eslint-plugin-react": "^7.26.1",
     "husky": "^7.0.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint",
-      "post-commit": "echo \"circle ci runs from here\""
-    }
   }
 }
