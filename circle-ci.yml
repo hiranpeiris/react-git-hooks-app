@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: 216095741092.dkr.ecr.ap-southeast-1.amazonaws.com/node:12
+        aws_auth:
+          aws_access_key_id: XXX
+          aws_secret_access_key: XXX
+    steps:
+      - checkout
+      - run:
+          name: Install npm dependencies
+          command: |
+            sudo npm install -g
+      - test:
+          name: Running integration tests
+          command: |
+            sudo npm run test
+workflows:
+  build:
+    jobs:
+      - build

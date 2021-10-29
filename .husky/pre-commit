@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+echo ================================= Running code quality tests =================================
 yarn lint
+
+echo ================================= Running unit tests =================================
+yarn test

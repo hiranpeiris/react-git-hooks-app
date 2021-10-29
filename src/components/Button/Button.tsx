@@ -10,5 +10,5 @@ export const Button: React.FC<ButtonProps> = ({
     <div onClick={onClick && onClick} className="button-style">
       {title}
     </div>
-  );
+  )
 };
