@@ -16,7 +16,7 @@ const App = () => {
       <br/>
       <Button title="Count Up" onClick={() => setCount(count + 1)} />
     </Container>
-  )
+  );
 };
 
 export default App;
