@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src --color"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +40,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint-plugin-react": "^7.26.1",
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint",
+      "post-commit": "echo \"circle ci runs from here\""
+    }
   }
 }

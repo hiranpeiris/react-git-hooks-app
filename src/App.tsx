@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Container, ContainerAlign, Text, Button } from './components';
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container align={ContainerAlign.Center}>
+      <Text fontSize="40px" color="brown">
+        React with GitHooks
+      </Text>
+      <br/>
+      <Text fontSize="24px" color="blue">
+        {`Count: ${count}`}
+      </Text>
+      <br/>
+      <Button title="Count Up" onClick={() => setCount(count + 1)} />
+    </Container>
   );
-}
+};
 
 export default App;
