@@ -16,7 +16,7 @@ jobs:
       - test:
           name: Running integration tests
           command: |
-            sudo npm run test
+            sudo npm test
 workflows:
   build:
     jobs:
