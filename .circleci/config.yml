@@ -13,11 +13,16 @@ jobs:
           name: Install npm dependencies
           command: |
             sudo npm install -g
-      - test:
+  test:
+    steps:
+      - run:
           name: Running integration tests
           command: |
-            sudo npm test
+            sudo npm run test
 workflows:
   build:
     jobs:
       - build
+      - test:
+          requires:
+            - build
