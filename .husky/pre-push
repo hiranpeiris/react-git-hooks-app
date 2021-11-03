@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 echo ================================= Start local CI =================================
-circleci local execute --job test
+# circleci local execute --job test
 echo ================================= End local CI =================================
