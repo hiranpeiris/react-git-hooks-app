@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 echo ================================= Start local CI =================================
-circleci ./circle-ci.yml local execute --job build
+circleci local execute --job build
 echo ================================= End local CI =================================
